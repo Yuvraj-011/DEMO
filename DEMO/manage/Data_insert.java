@@ -37,13 +37,14 @@ public class Data_insert {
                 int rowsAffected = preparedStatement.executeUpdate();
                 if (rowsAffected > 0) {
                     System.out.println("Data inserted successfully");
+                    System.out.println("Your id is " + ids);
                 } else {
                     System.out.println("Failed to insert data");
                 }
             } catch (SQLException e) {
                 System.out.println("Error inserting data:");
                 System.out.println(e.getMessage());
-                System.out.println("Your id is " + ids);
+                
             }
         } catch (SQLException e) {
             System.out.println("Error establishing database connection:");

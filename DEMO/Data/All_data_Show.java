@@ -17,8 +17,9 @@ public class All_data_Show {
             String query = "Select * from user_data";
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             ResultSet resultSet = preparedStatement.executeQuery();
-
+            int count = 0;
             while (resultSet.next()) {
+                count += 1;
                 System.out.println();
                 System.out.println("Person ID :- " + resultSet.getString("personid"));
                 System.out.println("First-Name " + resultSet.getString("firstname"));
@@ -27,6 +28,8 @@ public class All_data_Show {
                 System.out.println("City " + resultSet.getString("city"));
                 System.out.println();
             }
+            System.out.println("Total data insert in this data base is " + count);
+            System.out.println();
 
         } catch (Exception e) {
             System.out.println(e.getMessage());
