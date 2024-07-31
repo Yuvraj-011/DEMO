@@ -28,7 +28,7 @@ public class All_data_Show {
                 System.out.println("City " + resultSet.getString("city"));
                 System.out.println();
             }
-            System.out.println("Total data insert in this data base is " + count);
+            System.out.println("Total data inserted in this data base is " + count);
             System.out.println();
 
         } catch (Exception e) {
